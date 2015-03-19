@@ -6,9 +6,9 @@ function Bullet(x, y) {
 	this.velY = -700;
 
 	this.sprite = new Sprite({
-		path: "images/Bullet.png",
+		path: "images/Bullet_Player.png",
 		type: "static",
-		width: 4,
+		width: 3,
 		height: 16
 	});
 }

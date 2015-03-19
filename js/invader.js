@@ -49,7 +49,7 @@
 				type: "spritesheet",
 				width: 32,
 				height: 32,
-				sheet_width: 4,
+				sheet_width: (i > 0 ? 4 : 2), //THIS IS TERRIBLE
 				sheet_height: 1
 			});
 		}
@@ -121,7 +121,7 @@
 					if(Math.random() < adjusted_chance) {
 						var bulletX = this.posX + x * this.CELL_WIDTH + (this.INVADER_WIDTH - this.CELL_WIDTH) / 2 + this.INVADER_WIDTH / 2;
 						var bulletY = this.posY + y * this.CELL_HEIGHT + (this.INVADER_HEIGHT - this.CELL_HEIGHT) / 2 + this.INVADER_HEIGHT / 2;
-						var invaderBullet = new InvaderBullet(bulletX, bulletY);
+						var invaderBullet = new InvaderBullet(bulletX, bulletY, y);
 						Game.invaderBullets.push(invaderBullet);
 					}
 
